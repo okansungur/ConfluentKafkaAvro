@@ -158,6 +158,6 @@ You can check the schema file form the students schema menu. You can delete the 
 </p>
 
 
-
+Now we created the producer application successfully. And we are ready for the Consumer part. 
 
 
