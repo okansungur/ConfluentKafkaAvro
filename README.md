@@ -29,7 +29,7 @@ bytes: sequence of 8-bit unsigned bytes
 string: unicode character sequence
 ```
 
-First we will create a student.avsc  file.
+First we will create a **student.avsc  file.
 ```
 {
   "namespace": "com.example.student",
