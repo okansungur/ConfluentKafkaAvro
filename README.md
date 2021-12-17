@@ -142,18 +142,19 @@ Now we are ready to run our application. When we click the url(localhost:9393/my
 
 <p align="center">
   <img  src="https://github.com/okansungur/ConfluentKafkaAvro/blob/main/controlcenter1.png"><br/>
-  Control Center web interface
+  Control Center generated students topic
 </p>
 
+You can check the schema file form the students schema menu. You can delete the schema or change the compatibility modes from here.
 <p align="center">
   <img  src="https://github.com/okansungur/ConfluentKafkaAvro/blob/main/controlcenter2.png"><br/>
-  Control Center web interface
+  Control Center generated avro schema file
 </p>
 
 
 <p align="center">
   <img  src="https://github.com/okansungur/ConfluentKafkaAvro/blob/main/controlcenter3.png"><br/>
-  Control Center web interface
+  Control Center incoming message
 </p>
 
 
