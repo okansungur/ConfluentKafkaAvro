@@ -184,6 +184,24 @@ You can check the schema file form the students schema menu. You can delete the 
 
 
 Now we created the producer application successfully. And we are ready for the Consumer part. 
-For 
+For Consumer application we will place the myavro directory to  src\main.We will  add the avro-maven-plugin and neccessary dependencies to our pom.xml.
+We will generate our Student.class just like we did in Producer application. Just to make a difference we will use application.yaml. 
+As this application will deserialize our data we will use the key&value deserializer classes. And our application will run at port 9392.
 
+```
+
+server:
+  port: 9392
+spring:
+  kafka:
+    bootstrap-server: localhost:9092
+    consumer:
+      auto-offset-reset: latest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+    properties:
+      schema.registry.url: http://localhost:8081
+      specific.avro.reader: true
+
+```
 
