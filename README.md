@@ -59,8 +59,8 @@ We will now use the command **docker compose up** from the command prompt to mak
 We will be creating two springboot applications. One of them is the Producer application and the other one will be the Consumer. For the Producer application we will be creating a directory myavro and we will place student.avsc to that folder.
 
 <p align="center">
-  <img  src="https://github.com/okansungur/CodeQuality/blob/main/images/sonar1.png"><br/>
-  StartSonar.bat from SonarQube installation directory
+  <img  src="https://github.com/okansungur/ConfluentKafkaAvro/blob/main/avrodirectory.png"><br/>
+  student.avsc directory
 </p>
 
 
