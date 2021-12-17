@@ -62,7 +62,7 @@ We will be creating two springboot applications. One of them is the Producer app
   <img  src="https://github.com/okansungur/ConfluentKafkaAvro/blob/main/avrodirectory.png"><br/>
   student.avsc directory
 </p>
-
+We need avro-maven-plugin to generate the java classes. So please add the necessary dependencies.
 
 
 
