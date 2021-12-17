@@ -55,6 +55,9 @@ First we will create a **student.avsc**  file.
   }
 ```
 
+We will now use the command **docker compose up** from the command prompt to make our containers up and running. Make sure that all the containers are running. Some of them can fail at first so please restart those containers.,
+
+
 
 
 
