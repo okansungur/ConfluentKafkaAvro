@@ -13,11 +13,23 @@ Today we will talk about Avro, one of the most mature and experienced serializat
 ## Confluent Platform
 Confluent is a data streaming platform based on Apache Kafka capable of publish-and-subscribe, storage and  processing the data stream.
 We define confluent as a data streaming  platform. İt is based on Apache Kafka. It can be used as publish-subscribe based messaging , storage and processing the streams.
-We will need a confluent platform to make our springboot application work. You can download the docker compose file from 
-[Github](https://github.com/confluentinc/cp-all-in-one/tree/7.0.1-post/cp-all-in-one) 
+We will need a confluent platform to make our springboot application work. Make sure that you have docker installed. We will be using a docker compose file.
+You can download the docker compose file from  [Github](https://github.com/confluentinc/cp-all-in-one/tree/7.0.1-post/cp-all-in-one).
 More information is available at  [Confluent](https://docs.confluent.io/5.5.1/quickstart/ce-docker-quickstart.html) 
 
-We will also need a student.avsc  file .
+According to avro.apache.org Avro Schema Decleration primitive types are listed as 
+```
+null: no value
+boolean: a binary value
+int: 32-bit signed integer
+long: 64-bit signed integer
+float: single precision (32-bit) IEEE 754 floating-point number
+double: double precision (64-bit) IEEE 754 floating-point number
+bytes: sequence of 8-bit unsigned bytes
+string: unicode character sequence
+```
+
+First we will create a student.avsc  file.
 ```
 {
   "namespace": "com.example.student",
