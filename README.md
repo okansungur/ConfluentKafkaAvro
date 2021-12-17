@@ -102,8 +102,7 @@ spring.kafka.producer.value-serializer=  io.confluent.kafka.serializers.KafkaAvr
 ```
 
 
-
-And a  ProducerController for generating some random values from the web address http://localhost:9393/mystudent/init
+And a  ProducerController for generating some random values from the url address http://localhost:9393/mystudent/init
 
 ```
 
@@ -127,7 +126,7 @@ public class ProducerController {
 }
 ```
 
-The 
+
 
 
 
