@@ -13,6 +13,8 @@ Today we will talk about Avro, one of the most mature and experienced serializat
 ## Confluent Platform
 Confluent is a data streaming platform based on Apache Kafka capable of publish-and-subscribe, storage and  processing the data stream.
 We define confluent as a data streaming  platform. İt is based on Apache Kafka. It can be used as publish-subscribe based messaging , storage and processing the streams.
+We will need a confluent platform to make our springboot application work. You can download the docker compose file from 
+[Github](https://github.com/confluentinc/cp-all-in-one/tree/7.0.1-post/cp-all-in-one) 
 More information is available at  [Confluent](https://docs.confluent.io/5.5.1/quickstart/ce-docker-quickstart.html) 
 
 
