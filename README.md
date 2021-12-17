@@ -186,7 +186,7 @@ You can check the schema file form the students schema menu. You can delete the 
 Now we created the producer application successfully. And we are ready for the Consumer part. 
 For Consumer application we will place the myavro directory to  src\main.We will  add the avro-maven-plugin and neccessary dependencies to our pom.xml.
 We will generate our Student.class just like we did in Producer application. Just to make a difference we will use application.yaml. 
-As this application will deserialize our data we will use the key&value deserializer classes. And our application will run at port 9392.
+As this application will deserialize our data we will use the key&value deserializer classes. Also our application will run at port 9392.
 
 ```
 
@@ -204,4 +204,31 @@ spring:
       specific.avro.reader: true
 
 ```
+
+Next we will define KafkaConsumerService class. This class will consume the messages. With the KafkaListener annotation we passs the topic and groupid parameters.
+
+```
+
+@Service
+public class KafkaConsumerService {
+
+    @KafkaListener(topics = "students", groupId = "groupid")
+    public void KafkaConsumer(@Payload Student stu,
+                              @Header(name = KafkaHeaders.RECEIVED_MESSAGE_KEY) String key) {
+
+        System.out.println("Received key is: "+ key + " & value is "+ stu.getName()+" studentid is "+stu.getStudentid());
+    }
+}
+
+```
+When we run our application and send several messages from the Producer rest application we will get the output.
+
+<p align="center">
+  <img  src="https://github.com/okansungur/ConfluentKafkaAvro/blob/main/consumer.png"><br/>
+  Consumer messages
+</p>
+
+
+
+
 
