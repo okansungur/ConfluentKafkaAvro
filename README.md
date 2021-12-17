@@ -62,7 +62,9 @@ We will be creating two springboot applications. One of them is the Producer app
   <img  src="https://github.com/okansungur/ConfluentKafkaAvro/blob/main/avrodirectory.png"><br/>
   student.avsc directory
 </p>
-We need avro-maven-plugin to generate the java classes. So please add the necessary dependencies.
+We need avro-maven-plugin to generate the java classes. So please add the necessary dependencies. We will create a KafkaProducerService to send our messages to kafka topic.
+And a  ProducerController for generation some random values from the web interface.
+
 
 
 
