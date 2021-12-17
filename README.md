@@ -62,7 +62,27 @@ We will be creating two springboot applications. One of them is the Producer app
   <img  src="https://github.com/okansungur/ConfluentKafkaAvro/blob/main/avrodirectory.png"><br/>
   student.avsc directory
 </p>
-We need avro-maven-plugin to generate the java classes. So please add the necessary dependencies. We will create a KafkaProducerService to send our messages to kafka topic.
+We need avro-maven-plugin to generate the java classes. So please add the necessary dependencies to pom.xml. 
+
+We will create a KafkaProducerService to send our messages to kafka 
+
+```
+@Service
+public class KafkaProducerService {
+
+    @Value("students")
+    private String TOPIC;
+
+    @Autowired
+    private KafkaTemplate<String, Student> kafkaTemplate;
+
+    public void sendMessage(Student student) {
+        System.out.println("student"+student);
+        kafkaTemplate.send(TOPIC, student.getId()+"", student);
+    }
+}
+```
+
 The topic name will be students   and the group id will be groupid.
 The producer key&value serializers are also defined at application.properties file.
 
@@ -81,24 +101,9 @@ spring.kafka.producer.value-serializer=  io.confluent.kafka.serializers.KafkaAvr
 
 ```
 
+
+
 And a  ProducerController for generating some random values from the web address http://localhost:9393/mystudent/init
-```
-@Service
-public class KafkaProducerService {
-
-    @Value("students")
-    private String TOPIC;
-
-    @Autowired
-    private KafkaTemplate<String, Student> kafkaTemplate;
-
-    public void sendMessage(Student student) {
-        System.out.println("student"+student);
-        kafkaTemplate.send(TOPIC, student.getId()+"", student);
-    }
-}
-```
-
 
 ```
 
