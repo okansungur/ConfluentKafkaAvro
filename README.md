@@ -62,9 +62,14 @@ We will be creating two springboot applications. One of them is the Producer app
   <img  src="https://github.com/okansungur/ConfluentKafkaAvro/blob/main/avrodirectory.png"><br/>
   student.avsc directory
 </p>
-We need avro-maven-plugin to generate the java classes. So please add the necessary dependencies to pom.xml. 
+We need avro-maven-plugin to generate the java classes. So please add the necessary dependencies to pom.xml. Run maven-clean and compile sequentialy.This will generate the
+Student class.
+<p align="center">
+  <img  src="https://github.com/okansungur/ConfluentKafkaAvro/blob/main/generatedclass.png"><br/>
+  Generated class by maven plugin
+</p>
 
-We will create a KafkaProducerService to send our messages to kafka 
+Next we will create a KafkaProducerService to send our messages to kafka .This will send the message to our topic with an id and value as student.
 
 ```
 @Service
