@@ -30,7 +30,7 @@ bytes: sequence of 8-bit unsigned bytes
 string: unicode character sequence
 ```
 
-First we will create a **student.avsc**  file. The package namespace here is important.We will be using the generated student class within our applications.
+First we will create a **student.avsc**  file. The package namespace here is important. We will be using the generated student class within our applications.
 ```
 {
   "namespace": "com.example.student",
@@ -159,5 +159,6 @@ You can check the schema file form the students schema menu. You can delete the 
 
 
 Now we created the producer application successfully. And we are ready for the Consumer part. 
+For 
 
 
