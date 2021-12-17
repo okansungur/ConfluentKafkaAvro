@@ -17,4 +17,27 @@ We will need a confluent platform to make our springboot application work. You c
 [Github](https://github.com/confluentinc/cp-all-in-one/tree/7.0.1-post/cp-all-in-one) 
 More information is available at  [Confluent](https://docs.confluent.io/5.5.1/quickstart/ce-docker-quickstart.html) 
 
+We will also need a student.avsc  file .
+```
+{
+  "namespace": "com.example.student",
+  "type": "record",
+  "name": "Student",
+  "fields": [
+    {
+          "name": "id",
+          "type": "int"
 
+        },
+      {
+        "name": "name",
+        "type": "string",
+        "avro.java.string": "String"
+      },
+      {
+        "name": "studentid",
+        "type": "int"
+      }
+    ]
+  }
+```
