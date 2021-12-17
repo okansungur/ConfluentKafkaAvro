@@ -137,6 +137,24 @@ public class ProducerController {
 }
 ```
 
+Now we are ready to run our application. When we click the url(localhost:9393/mystudent/init) we will send the message and we can track the message from the Confluent control center. You can open the control center from http://localhost:9021/clusters
+
+
+<p align="center">
+  <img  src="https://github.com/okansungur/ConfluentKafkaAvro/blob/main/controlcenter1.png"><br/>
+  Control Center web interface
+</p>
+
+<p align="center">
+  <img  src="https://github.com/okansungur/ConfluentKafkaAvro/blob/main/controlcenter2.png"><br/>
+  Control Center web interface
+</p>
+
+
+<p align="center">
+  <img  src="https://github.com/okansungur/ConfluentKafkaAvro/blob/main/controlcenter3.png"><br/>
+  Control Center web interface
+</p>
 
 
 
