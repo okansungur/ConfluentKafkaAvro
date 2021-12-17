@@ -68,9 +68,34 @@ We will be creating two springboot applications. One of them is the Producer app
 
 <p align="center">
   <img  src="https://github.com/okansungur/ConfluentKafkaAvro/blob/main/avrodirectory.png"><br/>
-  student.avsc directory
+  student.avsc  directory(myavro)
 </p>
-We need avro-maven-plugin to generate the java classes. So please add the necessary dependencies to pom.xml. Run maven-clean and compile sequentialy.This will generate the
+We need avro-maven-plugin to generate the java classes. We should tell maven the place of our source file student.avsc
+
+```
+
+   <plugin>
+                <groupId>org.apache.avro</groupId>
+                <artifactId>avro-maven-plugin</artifactId>
+                <version>1.8.2</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>schema</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirectory>src/main/myavro</sourceDirectory>
+                            <outputDirectory>${project.build.directory}/generated-sources</outputDirectory>
+                            <stringType>String</stringType>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+```
+
+So please add the necessary dependencies to pom.xml. Run maven-clean and compile sequentialy.This will generate the
 Student class.
 <p align="center">
   <img  src="https://github.com/okansungur/ConfluentKafkaAvro/blob/main/generatedclass.png"><br/>
