@@ -63,8 +63,47 @@ We will be creating two springboot applications. One of them is the Producer app
   student.avsc directory
 </p>
 We need avro-maven-plugin to generate the java classes. So please add the necessary dependencies. We will create a KafkaProducerService to send our messages to kafka topic.
-And a  ProducerController for generation some random values from the web interface.
+And a  ProducerController for generating some random values from the web address http://localhost:9393/mystudent/init
 
+```
+@Service
+public class KafkaProducerService {
+
+    @Value("students")
+    private String TOPIC;
+
+    @Autowired
+    private KafkaTemplate<String, Student> kafkaTemplate;
+
+    public void sendMessage(Student student) {
+        System.out.println("student"+student);
+        kafkaTemplate.send(TOPIC, student.getId()+"", student);
+    }
+}
+```
+
+
+```
+
+@RestController
+@RequestMapping(value = "/mystudent")
+public class ProducerController {
+
+    @Autowired
+    private KafkaProducerService producerService;
+
+    @GetMapping(value = "/init")
+    public void sendMessageKafkaTopic() {
+        Student student=new Student();
+        int value=(int)Math.ceil(Math.random()*10000);
+        student.setId(value);
+        student.setName("Kate"+value);
+        student.setStudentid(371+value);
+        producerService.sendMessage(student);
+    }
+
+}
+```
 
 
 
