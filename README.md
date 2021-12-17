@@ -69,7 +69,7 @@ Student class.
   Generated class by maven plugin
 </p>
 
-Next we will create a KafkaProducerService to send our messages to kafka .This will send the message to our topic with an id and value as student.
+Next we will create a KafkaProducerService to send our messages to kafka .This will send the message to our topic with an id and value as student. For a better understanding we hardcoded the student value but you can assign the value from the application.properties file.
 
 ```
 @Service
@@ -87,10 +87,8 @@ public class KafkaProducerService {
     }
 }
 ```
-
-The topic name will be students   and the group id will be groupid.
-The producer key&value serializers are also defined at application.properties file.
-
+We will define some properties to application.properties file. The topic name will be students and the group id will be groupid.
+The producer key&value serializers are also defined.The dependencies are definet at pom.xml.
 ```
 
 server.port=9393
@@ -107,7 +105,7 @@ spring.kafka.producer.value-serializer=  io.confluent.kafka.serializers.KafkaAvr
 ```
 
 
-And a  ProducerController for generating some random values from the url address http://localhost:9393/mystudent/init
+The ProducerController is created for generating some random values from the url address http://localhost:9393/mystudent/init
 
 ```
 
