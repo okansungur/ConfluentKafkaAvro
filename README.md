@@ -63,7 +63,7 @@ We will be creating two springboot applications. One of them is the Producer app
   student.avsc directory
 </p>
 We need avro-maven-plugin to generate the java classes. So please add the necessary dependencies. We will create a KafkaProducerService to send our messages to kafka topic.
-The topic name will be  *topic.name=students*  and the group id will be  _spring.kafka.consumer.group-id=groupid_
+The topic name will be  * *topic.name=students* *  and the group id will be  _spring.kafka.consumer.group-id=groupid_
 The producer key&value serializers are also defined at application.properties file.
 And a  ProducerController for generating some random values from the web address http://localhost:9393/mystudent/init
 
