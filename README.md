@@ -162,7 +162,7 @@ public class ProducerController {
 }
 ```
 
-Now we are ready to run our application. When we click the url(localhost:9393/mystudent/init) we will send the message and we can track the message from the Confluent control center. You can open the control center from http://localhost:9021/clusters
+Now we are ready to run our application. When we click the url(localhost:9393/mystudent/init) we will send the message and we can track the message from the Confluent control center. The control center is used to manage and monitor Apache Kafka. You can open the control center from http://localhost:9021/clusters.  
 
 
 <p align="center">
