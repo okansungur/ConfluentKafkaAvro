@@ -15,7 +15,6 @@ public class ProducerController {
     @Autowired
     private KafkaProducerService producerService;
 
-
     @GetMapping(value = "/init")
     public void sendMessageKafkaTopic() {
         Student student=new Student();
@@ -25,7 +24,6 @@ public class ProducerController {
         student.setStudentid(371+value);
         producerService.sendMessage(student);
     }
-
 
 }
 
