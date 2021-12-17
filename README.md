@@ -55,7 +55,15 @@ First we will create a **student.avsc**  file. The package namespace here is imp
   }
 ```
 
-We will now use the command **docker compose up** from the command prompt to make our containers up and running. Make sure that all the containers are running. Some of them can fail at first so please restart those containers.,
+We will now use the command **docker compose up** from the command prompt to make our containers up and running. Make sure that all the containers are running. Some of them can fail at first so please restart those containers.
+
+<p align="center">
+  <img  src="https://github.com/okansungur/ConfluentKafkaAvro/blob/main/containerlist.png"><br/>
+  Docker container list
+</p>
+
+
+
 We will be creating two springboot applications. One of them is the Producer application and the other one will be the Consumer. For the Producer application we will be creating a directory myavro and we will place student.avsc to that folder.
 
 <p align="center">
