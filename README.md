@@ -1,4 +1,4 @@
-# Kafka, Apache Avro and Confluent Platform with springboot
+# Kafka, Apache Avro and Confluent Platform with Spring Boot
 ## Kafka :
 We need streaming because we  need to backup data, monitoring or detecting abnormalities,creating new streams from the original streams ,drip feed events into columnar or nosql databases.
 There are a variety of schema technologies and they are known as data serialization systems. We have malready mentioned some populer ones with our tutorials.
